@@ -1,0 +1,31 @@
+.text-field {
+	outline: none;
+	border: none;
+	height: 40px;
+	width: 300px;
+	
+	background-color: var(--primary-bg);
+	border-radius: 25px;
+	padding: 5px 20px;
+	box-shadow: inset -6px -6px 15px var(--white-shadow),
+		inset 6px 6px 15px var(--black-shadow);
+}
+
+.input-container {
+	position: relative;
+	margin: 15px 0;
+}
+
+.far {
+    z-index: 10;
+	position: absolute;
+	top: 40%;
+	right: 8%;
+	color: var(--placeholder-color);
+}
+
+.error-text {
+	color: red;
+	font-size: 12px;
+	text-align: center;
+}

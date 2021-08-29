@@ -1,0 +1,25 @@
+.button {
+	outline: none;
+	border: none;
+	height: 40px;
+	margin: 15px 0;
+	background-color: var(--primary-bg);
+	color: var(--button-text-color);
+	border-radius: 25px;
+	padding: 5px 20px;
+	box-shadow: -6px -6px 15px var(--white-shadow),
+		6px 6px 15px var(--black-shadow);
+	transition: box-shadow 1s;
+	font-size: 15px;
+}
+
+.button:active {
+	box-shadow: inset -6px -6px 15px var(--white-shadow),
+		inset 6px 6px 15px var(--black-shadow);
+}
+
+.button-span {
+	margin-right: 10px;
+	font-size: 15px;
+	color: cadetblue;
+}

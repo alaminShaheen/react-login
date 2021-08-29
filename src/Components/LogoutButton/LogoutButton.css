@@ -1,0 +1,27 @@
+.logout-button {
+	outline: none;
+	border: none;
+	height: 18rem;
+	width: 18rem;
+	margin: 15px 0;
+	background-color: var(--primary-bg);
+	border-radius: 50%;
+	padding: 5px 20px;
+	box-shadow: -6px -6px 15px var(--white-shadow),
+		6px 6px 15px var(--black-shadow);
+	transition: box-shadow 1s;
+}
+
+.logout-button:active {
+	box-shadow: inset -6px -6px 15px var(--white-shadow),
+		inset 6px 6px 15px var(--black-shadow);
+}
+
+.logout-button:active .fa-power-off {
+	color: red;
+}
+
+.fa-power-off {
+	color: green;
+	font-size: 5rem;
+}

@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+	BrowserRouter,
+	Redirect,
+	Route,
+	Switch,
+	useLocation
+} from "react-router-dom";
+import "./App.css";
+import Register from "Pages/Register/Register";
+import Login from "Pages/Login/Login";
+import { useUserContext } from "Store";
+import Home from "Pages/Home/Home";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const { userState } = useUserContext();
+	// console.log(useLocation())
+	// const location = ;
+	return (
+		<div className="App">
+			<BrowserRouter>
+				<Switch>
+					<Route exact path="/">
+						{userState.Id ? <Home /> : <Redirect to="/login" />}
+					</Route>
+					<Route path="/login" component={Login} />
+					<Route path="/register" component={Register} />
+				</Switch>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;
